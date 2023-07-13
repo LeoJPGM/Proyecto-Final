@@ -1,5 +1,6 @@
 package com.example.application.views.principal;
 
+import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
@@ -16,11 +17,13 @@ public class PrimerosPasosView extends PaginaBase {
         PaginaPrincipal();
     }
     public void PaginaPrincipal(){
-        VerticalLayout contenedorDeTitulo = new VerticalLayout();
-        VerticalLayout contenedorDeSubtitulo = new VerticalLayout();
-        VerticalLayout contenedorDeInfo = new VerticalLayout();
+        //Contenedores
         VerticalLayout contenedorBase = new VerticalLayout();
         HorizontalLayout contenedorColorBase = new HorizontalLayout();
+        VerticalLayout contenedorDeTitulo = new VerticalLayout();
+        VerticalLayout contenedorDeSubInfo = new VerticalLayout();
+        HorizontalLayout contenedorBaseDeInfo = new HorizontalLayout();
+        HorizontalLayout contenedorOpcionesBase = new HorizontalLayout();
 
         //Primer Contenedor (Solo color)
         VerticalLayout contenedor1 = new VerticalLayout();
@@ -28,9 +31,7 @@ public class PrimerosPasosView extends PaginaBase {
         contenedorColorBase.add(contenedor1);
         contenedorColorBase.setWidthFull();
 
-        contenedorBase.add(contenedorColorBase);
-
-        //Contenedor de informacion
+        //Contenedor de titulo
         Span info = new Span("Primeros pasos");
         info.getStyle().set("color", "black");
         info.getStyle().set("font-weight", "bold");
@@ -39,6 +40,9 @@ public class PrimerosPasosView extends PaginaBase {
         contenedorDeTitulo.add(info);
         contenedorDeTitulo.setAlignItems(FlexComponent.Alignment.CENTER);
 
+        //Contenedor de informacion
+        VerticalLayout contenedorInfo = new VerticalLayout();
+
         Span info2 = new Span("PixelCode es es fácil y sencillo");
         info2.getStyle().set("font-size", "24px");
         info2.getStyle().set("color", "black");
@@ -46,21 +50,71 @@ public class PrimerosPasosView extends PaginaBase {
 
         Span info3 = new Span("Todo lo que necesitas es un ordenador con conexión a Internet. No es necesario descargar ni instalar nada. PixelCode es gratuito y funciona en todos los navegadores y plataformas.");
 
-        contenedorDeInfo.add(info2, info3);
-        contenedorDeInfo.getStyle().set("background-color", "#dae1f0");
-        contenedorDeInfo.setWidth("50%");
+        contenedorInfo.add(info2, info3);
+        contenedorInfo.getStyle().set("background-color", "#dae1f0");
+        contenedorInfo.setWidth("50%");
 
-        //Contenedor subtitulo
+        //Contenedor de imagen
+        VerticalLayout contenedorDeImagen = new VerticalLayout();
+        Span eliminar = new Span("Aqui va una imagen");
+
+        contenedorDeImagen.add(eliminar);
+        contenedorDeImagen.setWidth("50%");
+        contenedorBaseDeInfo.add(contenedorInfo, contenedorDeImagen);
+
+        //Contenedor subInfo
         Span info4 = new Span("Empieza a programar");
         info4.getStyle().set("color", "black");
         info4.getStyle().set("font-weight", "bold");
         info4.getStyle().set("font-size", "28px");
 
-        contenedorDeSubtitulo.add(info4);
-        contenedorDeSubtitulo.setAlignItems(FlexComponent.Alignment.CENTER);
+        Span info5 = new Span("Escoge entre los diversos lenguajes de programacion que tenemos para ti.");
+
+        contenedorDeSubInfo.add(info4, info5);
+        contenedorDeSubInfo.setAlignItems(FlexComponent.Alignment.CENTER);
+
+        //Contenedor de opciones
+        VerticalLayout contenedorOpcion1 = new VerticalLayout();
+        Button empezar1 = new Button("Empezar");
 
 
-        contenedorBase.add(contenedorColorBase, contenedorDeTitulo, contenedorDeInfo, contenedorDeSubtitulo);
+        Span info6 = new Span("Aprender lenguaje en C");
+        info6.getStyle().set("color", "black");
+        info6.getStyle().set("font-weight", "bold");
+
+        Span info7 = new Span("Nuestro tutorial de C cubre conceptos básicos, tipos de datos, matrices, punteros, sentencias condicionales, bucles, funciones, cadenas, estructuras, uniones y mucho más.");
+
+        contenedorOpcion1.add(info6, info7, empezar1);
+        contenedorOpcion1.getStyle().set("background-color", "#81d8ff");
+        contenedorOpcion1.setWidth("35%");
+
+        VerticalLayout contenedorOpcion2 = new VerticalLayout();
+        Button empezar2 = new Button("Empezar");
+        Span info8 = new Span("Aprender lenguaje en C#");
+        info8.getStyle().set("color", "black");
+        info8.getStyle().set("font-weight", "bold");
+
+        Span info9 = new Span("¡Con nuestro tutorial interactivo de C#, aprenderá programación en C# sobre la marcha!");
+
+        contenedorOpcion2.add(info8, info9, empezar2);
+        contenedorOpcion2.getStyle().set("background-color", "#b9dc7a");
+        contenedorOpcion2.setWidth("30%");
+
+        VerticalLayout contenedorOpcion3 = new VerticalLayout();
+        Button empezar3 = new Button("Empezar");
+        Span info10 = new Span("Aprender lenguaje en Java");
+        info10.getStyle().set("color", "black");
+        info10.getStyle().set("font-weight", "bold");
+
+        Span info11 = new Span("Este curso de Java simple y amigable para principiantes no requiere conocimientos previos de codificación. Aprenderá todo sobre los conceptos clave de Java y escribirá código claro y funcional desde su primera lección.");
+
+        contenedorOpcion3.add(info10, info11, empezar3);
+        contenedorOpcion3.getStyle().set("background-color", "#ea8686");
+        contenedorOpcion3.setWidth("35%");
+
+        contenedorOpcionesBase.add(contenedorOpcion1, contenedorOpcion2, contenedorOpcion3);
+
+        contenedorBase.add(contenedorColorBase, contenedorDeTitulo, contenedorBaseDeInfo, contenedorDeSubInfo, contenedorOpcionesBase);
 
         setContent(contenedorBase);
     }
