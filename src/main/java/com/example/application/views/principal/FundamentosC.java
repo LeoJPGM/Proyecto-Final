@@ -80,7 +80,31 @@ public class FundamentosC extends PaginaBase{
         contenedorIntroduction.getStyle().set("background-color", "#dae1f0");
         contenedorIntroduction.setWidth("100%");
 
-        contenedorContenido.add(contenedorIntroduction,contenedorFund,contenedorestructura);
+        // Compilacion y ejecucion
+        VerticalLayout contenedorcompilacion = new VerticalLayout();
+
+        Span info7 = new Span("Estructura básica de un programa en C");
+        info7.getStyle().set("font-size", "24px");
+        info7.getStyle().set("color", "black");
+        info7.getStyle().set("font-weight", "bold");
+
+        Span info8 = new Span(" La compilación es el proceso de traducir el código fuente escrito en lenguaje C a un lenguaje de bajo nivel que la máquina pueda entender y ejecutar. El código fuente es el programa que has escrito utilizando la sintaxis y las reglas del lenguaje C.\n" +
+                "\n" +
+                "Para llevar a cabo la compilación de un programa en C, necesitamos un compilador específico para este lenguaje. Un compilador es una herramienta que toma el código fuente escrito en C y lo traduce a un código de máquina que pueda ser ejecutado por el procesador de la computadora. Uno de los compiladores más utilizados para C es el GCC (GNU Compiler Collection).\n" +
+                "\n" +
+                "El proceso de compilación consta de varias etapas. En la etapa de preprocesamiento, se realizan diferentes tareas, como la inclusión de archivos de cabecera y la expansión de macros. Luego, en la etapa de compilación, el código fuente se traduce a un código objeto, que contiene instrucciones en lenguaje ensamblador específicas de la arquitectura de la computadora. A continuación, en la etapa de enlace, los diferentes módulos de código objeto se combinan para formar un ejecutable final. Durante este proceso, se realizan varias verificaciones y optimizaciones para garantizar la correcta ejecución del programa.\n" +
+                "\n" +
+                "Una vez que el programa ha sido compilado con éxito, obtenemos un archivo ejecutable. Este archivo contiene las instrucciones de bajo nivel que la máquina puede interpretar y ejecutar. Para ejecutar el programa, simplemente debemos hacer doble clic en el archivo ejecutable o ejecutarlo desde la línea de comandos.\n" +
+                "\n" +
+                "Durante la ejecución del programa, el procesador interpreta las instrucciones del archivo ejecutable y realiza las operaciones especificadas en el código fuente. El programa puede interactuar con el usuario a través de la entrada y la salida, realizar cálculos, acceder a archivos y realizar otras tareas según lo haya sido programado.\n" +
+                "\n" +
+                "Es importante destacar que durante el proceso de compilación y ejecución, pueden surgir errores. Los errores de compilación ocurren cuando el compilador encuentra un problema en el código fuente, como una sintaxis incorrecta o una referencia a una variable no declarada. Estos errores deben corregirse antes de que el programa pueda ser ejecutado correctamente. Por otro lado, los errores de ejecución pueden ocurrir cuando el programa se está ejecutando y se encuentra con una situación inesperada, como una división por cero o una falta de memoria.");
+
+        contenedorIntroduction.add(info7, info8);
+        contenedorIntroduction.getStyle().set("background-color", "#dae1f0");
+        contenedorIntroduction.setWidth("100%");
+
+        contenedorContenido.add(contenedorIntroduction,contenedorFund,contenedorestructura,contenedorcompilacion);
         contenedorPrincipal.add(contenedorColor,contenedorTittle,contenedorContenido);
         setContent(contenedorPrincipal);
 
