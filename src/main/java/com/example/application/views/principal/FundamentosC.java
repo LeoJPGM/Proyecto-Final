@@ -8,7 +8,7 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import pagina.base.PaginaBase;
+
 
 @PageTitle("Fundamentos Lenguaje C")
 @Route(value = "fundamentos-c")
