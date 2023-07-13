@@ -77,7 +77,8 @@ public class PrimerosPasosView extends PaginaBase {
 
         //Contenedor de opciones
         VerticalLayout contenedorOpcion1 = new VerticalLayout();
-        Button empezar1 = new Button("Empezar");
+        Button empezar1 = new Button("Empezar", buttonClickEvent -> {getUI().ifPresent(ui -> {ui.navigate("lenguaje-c");});});
+
 
 
         Span info6 = new Span("Aprender lenguaje en C");
