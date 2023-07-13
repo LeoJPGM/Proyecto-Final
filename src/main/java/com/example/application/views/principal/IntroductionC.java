@@ -86,7 +86,7 @@ public class IntroductionC extends PaginaBase {
         //Contenedor Final
         VerticalLayout contenedorFinal = new VerticalLayout();
 
-        Span info8 = new Span("Control de flujo en C");
+        Span info8 = new Span("Proyecto Final");
         info4.getStyle().set("font-size", "24px");
         info4.getStyle().set("color", "black");
         info4.getStyle().set("font-weight", "bold");
