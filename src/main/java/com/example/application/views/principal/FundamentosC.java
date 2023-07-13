@@ -104,8 +104,9 @@ public class FundamentosC extends PaginaBase{
         contenedorIntroduction.getStyle().set("background-color", "#dae1f0");
         contenedorIntroduction.setWidth("100%");
 
+        Button empezar2 = new Button("Empezar aquí", buttonClickEvent -> {getUI().ifPresent(ui -> {ui.navigate("fundamentos-c");});});
         contenedorContenido.add(contenedorIntroduction,contenedorFund,contenedorestructura,contenedorcompilacion);
-        contenedorPrincipal.add(contenedorColor,contenedorTittle,contenedorContenido);
+        contenedorPrincipal.add(contenedorColor,contenedorTittle,contenedorContenido,empezar2);
         setContent(contenedorPrincipal);
 
     }

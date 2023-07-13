@@ -120,7 +120,7 @@ public class ControlFlujo extends PaginaBase{
                         "} while (condición);\n"+
                 "\n");
 
-
+        Button empezar3 = new Button("Finalizar módulo", buttonClickEvent -> {getUI().ifPresent(ui -> {ui.navigate("lenguaje-c");});});
 
         contenedorContenido.add(contenedorIntroduction,contenedorFund,contenedordatos);
         contenedorPrincipal.add(contenedorColor,contenedorTittle,contenedorContenido);

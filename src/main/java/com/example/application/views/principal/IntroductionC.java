@@ -97,8 +97,10 @@ public class IntroductionC extends PaginaBase {
         contenedorFinal.getStyle().set("background-color", "#dae1f0");
         contenedorFinal.setWidth("100%");
 
+        Button empezar1 = new Button("Empezar aquí", buttonClickEvent -> {getUI().ifPresent(ui -> {ui.navigate("fundamentos-c");});});
+
         contenedorSecciones.add(contenedorIntroduction,contenedorVariables,contenedorControl,contenedorFinal);
-        contenedorPrincipal.add(contenedorColor,contenedorTittle,contenedorSecciones);
+        contenedorPrincipal.add(contenedorColor,contenedorTittle,contenedorSecciones,empezar1);
         setContent(contenedorPrincipal);
     };
 

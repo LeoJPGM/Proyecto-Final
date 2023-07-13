@@ -91,20 +91,20 @@ public class IntroductionJava extends PaginaBase {
         contenedorControl.setWidth("100%");
 
         //Contenedor Final
-        VerticalLayout contenedorFinal = new VerticalLayout();
+        //VerticalLayout contenedorFinal = new VerticalLayout();
 
-        Span info8 = new Span("Proyecto Final");
-        info4.getStyle().set("font-size", "24px");
-        info4.getStyle().set("color", "black");
-        info4.getStyle().set("font-weight", "bold");
+       // Span info8 = new Span("Proyecto Final");
+        //info4.getStyle().set("font-size", "24px");
+        //info4.getStyle().set("color", "black");
+        //info4.getStyle().set("font-weight", "bold");
 
-        Span info9 = new Span("En esta sección pondrás en práctica todos los conocimientos que haz adquirido en las secciones anteriores.");
+        //Span info9 = new Span("En esta sección pondrás en práctica todos los conocimientos que haz adquirido en las secciones anteriores.");
 
-        contenedorFinal.add(info8, info9);
-        contenedorFinal.getStyle().set("background-color", "#dae1f0");
-        contenedorFinal.setWidth("100%");
+        //contenedorFinal.add(info8, info9);
+        //contenedorFinal.getStyle().set("background-color", "#dae1f0");
+        //contenedorFinal.setWidth("100%");
 
-        contenedorSecciones.add(contenedorIntroduction, contenedorPolimorfismo, contenedorControl, contenedorFinal);
+        contenedorSecciones.add(contenedorIntroduction, contenedorPolimorfismo, contenedorControl);
         contenedorPrincipal.add(contenedorColor, contenedorTittle, contenedorSecciones);
         setContent(contenedorPrincipal);
     }

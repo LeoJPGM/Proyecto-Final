@@ -165,8 +165,10 @@ public class VariablesC extends PaginaBase{
         contenedorlogico.getStyle().set("background-color", "#dae1f0");
         contenedorlogico.setWidth("100%");
 
+        Button empezar3 = new Button("Empezar aquí", buttonClickEvent -> {getUI().ifPresent(ui -> {ui.navigate("flujo-c");});});
+
         contenedorContenido.add(contenedorIntroduction,contenedorFund,contenedordatos,contenedoroperaciones,contenedorasignacion,contenedorcomparacion,contenedorlogico);
-        contenedorPrincipal.add(contenedorColor,contenedorTittle,contenedorContenido);
+        contenedorPrincipal.add(contenedorColor,contenedorTittle,contenedorContenido,empezar3);
         setContent(contenedorPrincipal);
 
     }
