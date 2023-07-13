@@ -1,6 +1,7 @@
 package com.example.application.views.principal;
 
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
@@ -37,7 +38,8 @@ public class PrincipalView extends PaginaBase {
         info.getStyle().set("font-size", "28px");
 
         Span info2 = new Span("PixelCode es una plataforma gratuita para aprender a programar en línea de una manera practica y sencilla.");
-        Span eliminar = new Span("Aqui deberia ir una imagen");
+        Image imagen1 = new Image("images/Imagen1.gif", "Imagen");
+        imagen1.setWidth("60%");
 
         Span info3 = new Span("Creación y programación");
         info3.getStyle().set("color", "black");
@@ -45,7 +47,8 @@ public class PrincipalView extends PaginaBase {
         info3.getStyle().set("font-size", "28px");
 
         Span info4 = new Span("Aprende diveros lenguajes de programación como C, C#, Java, entre otros.");
-        Span eliminar2 = new Span("Aqui deberia ir otra imagen");
+        Image imagen2 = new Image("images/Imagen2.gif", "Imagen2");
+        imagen2.setWidth("60%");
 
         Span info5 = new Span("Primeros pasos");
         info5.getStyle().set("color", "black");
@@ -58,7 +61,7 @@ public class PrincipalView extends PaginaBase {
 
 
         //Elementos de contenedor
-        contenedorDeInformacion.add(info, info2, eliminar, info3, info4, eliminar2, info5, info6, empezar);
+        contenedorDeInformacion.add(info, info2, imagen1, info3, info4, imagen2, info5, info6, empezar);
         contenedorDeInformacion.setAlignItems(FlexComponent.Alignment.CENTER);
         contenedorBase.add(contenedorColorBase, contenedorDeInformacion);
 

@@ -1,6 +1,7 @@
 package com.example.application.views.principal;
 
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
@@ -55,11 +56,12 @@ public class PrimerosPasosView extends PaginaBase {
         contenedorInfo.setWidth("50%");
 
         //Contenedor de imagen
-        VerticalLayout contenedorDeImagen = new VerticalLayout();
-        Span eliminar = new Span("Aqui va una imagen");
+        HorizontalLayout contenedorDeImagen = new HorizontalLayout();
+        Image imagen1 = new Image("images/Imagen3.gif", "Imagen");
+        imagen1.setWidth("80%");
 
-        contenedorDeImagen.add(eliminar);
-        contenedorDeImagen.setWidth("50%");
+        contenedorDeImagen.add(imagen1);
+        contenedorBaseDeInfo.setSpacing(false);
         contenedorBaseDeInfo.add(contenedorInfo, contenedorDeImagen);
 
         //Contenedor subInfo
